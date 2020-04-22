@@ -23,7 +23,15 @@ namespace Imagin.Colour.Controls
         /// <summary>
         /// 
         /// </summary>
-        public Imagin.Colour.Controls.Collections.ComponentCollection Components => _colorModel.Components;
+        public Imagin.Colour.Controls.Collections.ComponentCollection Components
+        {
+            get
+            {
+                if (_colorModel == null)
+                    _colorModel = Models.ColorModel.New(ColorModels.RGB);
+                return _colorModel.Components;
+            }
+        }
 
         Imagin.Colour.Conversion.ColorConverter _converter = new Imagin.Colour.Conversion.ColorConverter();
         /// <summary>

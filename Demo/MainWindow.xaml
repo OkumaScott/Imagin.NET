@@ -17,7 +17,6 @@
     Title="Imagin.NET Demo" 
     Width="540"
     WindowStartupLocation="CenterScreen"
-    WindowState="Maximized"
     x:Name="PART_MainWindow">
     <Common:BasicWindow.Resources>
         <Common:BindingProxy x:Key="BindingProxy" Data="{Binding ElementName=PART_MainWindow}"/>
